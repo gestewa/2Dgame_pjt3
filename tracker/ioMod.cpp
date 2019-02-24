@@ -55,10 +55,10 @@ SDL_Surface *IoMod::readSurface(const std::string &filename)
   return surface;
 }
 
-void IoMod::writeText(const std::string &msg, int x, int y) const
+void IoMod::writeTextHelper(const std::string &msg, int x, int y, const SDL_Color &c) const
 {
   SDL_Surface *surface =
-      TTF_RenderText_Solid(font, msg.c_str(), textColor);
+      TTF_RenderText_Solid(font, msg.c_str(), c);
 
   SDL_Texture *texture = SDL_CreateTextureFromSurface(renderer, surface);
 
@@ -69,4 +69,21 @@ void IoMod::writeText(const std::string &msg, int x, int y) const
 
   SDL_RenderCopy(renderer, texture, NULL, &dst);
   SDL_DestroyTexture(texture);
+}
+
+void IoMod::writeText(const std::string &msg, int x, int y) const
+{
+  writeTextHelper(msg, x, y, textColor);
+}
+void IoMod::writeText(const std::string &msg, int x, int y, const SDL_Color &c) const
+{
+  writeTextHelper(msg, x, y, c);
+}
+void IoMod::writeText(const std::string &msg, int x, int y, int r, int g, int b) const
+{
+  SDL_Color c = SDL_Color();
+  c.r = r;
+  c.g = g;
+  c.b = b;
+  writeTextHelper(msg, x, y, c);
 }
