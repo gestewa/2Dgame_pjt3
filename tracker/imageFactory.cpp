@@ -2,10 +2,9 @@
 #include "vector2f.h"
 #include "renderContext.h"
 
-ImageFactory *ImageFactory::getInstance()
+ImageFactory &ImageFactory::getInstance()
 {
-  if (!instance)
-    instance = new ImageFactory;
+  static ImageFactory instance;
   return instance;
 }
 
@@ -14,22 +13,22 @@ ImageFactory::~ImageFactory()
   std::cout << "Deleting images in Factory" << std::endl;
 
   // Free single image containers
-  std::map<std::string, STL_Surface *>::const_iterator s_it = surfaces.begin();
-  while (s_it != surfaces.end)
+  std::map<std::string, SDL_Surface *>::const_iterator s_it = surfaces.begin();
+  while (s_it != surfaces.end())
   {
-    SDL_FreeSurface(*s_it.second);
+    SDL_FreeSurface(s_it->second);
     s_it++;
   }
 
-  std::map<std::string, STL_Texture *>::const_iterator t_it = textures.begin();
-  while (t_it != textures.end)
+  std::map<std::string, SDL_Texture *>::const_iterator t_it = textures.begin();
+  while (t_it != textures.end())
   {
-    SDL_DestroyTexture(*t_it.second);
+    SDL_DestroyTexture(t_it->second);
     t_it++;
   }
 
-  std::map<std::string, STL_Image *>::const_iterator i_it = images.begin();
-  while (i_it != images.end)
+  std::map<std::string, Image *>::const_iterator i_it = images.begin();
+  while (i_it != images.end())
   {
     std::cout << "deleting " << i_it->first << std::endl;
     delete i_it->second;
@@ -97,7 +96,7 @@ std::vector<Image *> ImageFactory::getImages(const std::string &name)
   }
 
   IoMod &iomod = IoMod::getInstance();
-  RenderContext *renderContext = RenderContext::getInstance();
+  RenderContext &renderContext = RenderContext::getInstance();
   std::string sheetPath = gdata.getXmlStr(name + "/file");
   SDL_Surface *spriteSurface = iomod.readSurface(sheetPath);
   bool transparency = gdata.getXmlBool(name + "/transparency");
@@ -131,7 +130,7 @@ std::vector<Image *> ImageFactory::getImages(const std::string &name)
       SDL_SetColorKey(surface, SDL_TRUE, keyColor);
     }
     SDL_Texture *texture =
-        SDL_CreateTextureFromSurface(renderContext->getRenderer(), surface);
+        SDL_CreateTextureFromSurface(renderContext.getRenderer(), surface);
     surfaces.push_back(surface);
     textures.push_back(texture);
     images.push_back(new Image(surface));

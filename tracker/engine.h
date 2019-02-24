@@ -6,26 +6,28 @@
 #include "world.h"
 #include "viewport.h"
 
-class Engine {
+class Engine
+{
 public:
-  Engine ();
-  ~Engine ();
+  Engine();
+  ~Engine();
   void play();
   void switchSprite();
 
-  Engine(const Engine&) = delete;
-  Engine& operator=(const Engine&) = delete;
+  Engine(const Engine &) = delete;
+  Engine &operator=(const Engine &) = delete;
+
 private:
-  const RenderContext* rc;
-  const IoMod& io;
-  Clock& clock;
+  const RenderContext &rc;
+  const IoMod &io;
+  Clock &clock;
 
-  SDL_Renderer * const renderer;
+  SDL_Renderer *const renderer;
   World world;
-  Viewport& viewport;
+  Viewport &viewport;
 
-  Drawable* star;
-  Drawable* spinningStar;
+  Drawable *star;
+  Drawable *spinningStar;
   int currentSprite;
 
   bool makeVideo;
