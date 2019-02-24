@@ -3,13 +3,16 @@
 
 class Engine;
 
-class Clock {
+class Clock
+{
 public:
-  static Clock& getInstance();
+  static Clock &getInstance();
   unsigned int getTicks() const;
 
-  Clock(const Clock&) = delete;
-  Clock&operator=(const Clock&) = delete;
+  Clock(const Clock &) = delete;
+  Clock &operator=(const Clock &) = delete;
+  int getFps() const;
+
 private:
   friend class Engine;
 
@@ -32,11 +35,10 @@ private:
   void toggleSloMo();
 
   bool isStarted() const { return started; }
-  bool isPaused() const  { return paused;  }
-  unsigned int getFrames() const  { return frames;  }
-  unsigned int getSeconds() const { return getTicks()/1000;  }
+  bool isPaused() const { return paused; }
+  unsigned int getFrames() const { return frames; }
+  unsigned int getSeconds() const { return getTicks() / 1000; }
   unsigned int capFrameRate() const;
-  int getFps() const;
 
   void startClock();
   void pause();
