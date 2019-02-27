@@ -24,6 +24,11 @@ private:
 
   SDL_Renderer *const renderer;
   World world;
+  // for each new image you want to overlay
+  World table;
+  World fairy;
+  World fairy2;
+  // for defining the viewing box
   Viewport &viewport;
 
   Drawable *star;

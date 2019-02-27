@@ -22,6 +22,9 @@ Engine::Engine() : rc(RenderContext::getInstance()),
                    clock(Clock::getInstance()),
                    renderer(rc.getRenderer()),
                    world("back", Gamedata::getInstance().getXmlInt("back/factor")),
+                   table("table", Gamedata::getInstance().getXmlInt("table/factor")),
+                   fairy("fairy", Gamedata::getInstance().getXmlInt("fairy/factor")),
+                   fairy2("fairy2", Gamedata::getInstance().getXmlInt("fairy2/factor")),
                    viewport(Viewport::getInstance()),
                    star(new Sprite("YellowStar")),
                    spinningStar(new MultiSprite("SpinningStar")),
@@ -36,7 +39,9 @@ Engine::Engine() : rc(RenderContext::getInstance()),
 void Engine::draw() const
 {
   world.draw();
-
+  table.draw();
+  fairy.draw();
+  fairy2.draw();
   star->draw();
   spinningStar->draw();
 
@@ -49,6 +54,9 @@ void Engine::update(Uint32 ticks)
   star->update(ticks);
   spinningStar->update(ticks);
   world.update();
+  table.update();
+  fairy.update();
+  fairy2.update();
   viewport.update(); // always update viewport last
 }
 

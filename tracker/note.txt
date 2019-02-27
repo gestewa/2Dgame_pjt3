@@ -1,0 +1,1 @@
+For each object you add, you must add it in the xml, the game engine constructor game engine draw, game eenigne update, and in the engine.h

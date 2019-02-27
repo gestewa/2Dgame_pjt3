@@ -1,58 +1,76 @@
 <?xml version = "1.0"?>
 <GameData>
-<!-- screenTitle is also used to identify you and your animation. 
+  <!-- screenTitle is also used to identify you and your animation. 
      So make sure to include your name as part of the screenTitle -->
-<title>The Tracker Framework</title>
-<maxStringSize>50</maxStringSize>
+  <title>Gabrielle Stewart - The Rolling Dice</title>
+  <maxStringSize>50</maxStringSize>
 
-<frameCapOn>true</frameCapOn>
-<period>17</period>
+  <frameCapOn>true</frameCapOn>
+  <period>17</period>
 
-<maxFrames>300</maxFrames>
-<username>malloy</username>
+  <maxFrames>300</maxFrames>
+  <username>gestewa</username>
 
-<view>
-  <width>854</width>
-  <height>480</height>
-  <loc x="30" y="30"/>
-</view>
+  <view>
+    <width>1000</width>
+    <height>1000</height>
+    <loc x="30" y="30"/>
+  </view>
 
-<world>
-  <width>2000</width>
-  <height>800</height>
-</world>
+  <world>
+    <width>2559</width>
+    <height>1553</height>
+  </world>
 
-<back>
-  <file>assets/bigstarrysky.png</file>
-  <factor>1</factor>
-  <transparency>false</transparency>
-</back>
+  <back>
+    <file>assets/background.png</file>
+    <factor>6</factor>
+    <transparency>false</transparency>
+  </back>
 
-<font name="font">
-  <file>fonts/arial.ttf</file>
-  <size>24</size>
-  <red>255</red>
-  <green>255</green>
-  <blue>0</blue>
-  <alpha>0</alpha>
-</font>
+  <table>
+    <file>assets/tables.png</file>
+    <factor>1</factor>
+    <transparency>true</transparency>
+  </table>
 
-<SpinningStar>
-  <file>assets/stars.png</file>
-  <startLoc x="50" y="140"/>
-  <frames>4</frames>
-  <frameInterval>50</frameInterval>
-  <speedX>200</speedX>
-  <speedY>200</speedY>
-  <transparency>true</transparency>
-</SpinningStar>
+  <fairy>
+    <file>assets/fairy_placed.png</file>
+    <factor>2</factor>
+    <transparency>true</transparency>
+  </fairy>
 
-<YellowStar>
-  <file>assets/yellowstar32.png</file>
-  <startLoc x="227" y="240"/>
-  <speedX>300</speedX>
-  <speedY>300</speedY>
-  <transparency>false</transparency>
-</YellowStar>
+  <fairy2>
+    <file>assets/fairy2_placed.png</file>
+    <factor>3</factor>
+    <transparency>true</transparency>
+  </fairy2>
+
+  <font name="font">
+    <file>fonts/arial.ttf</file>
+    <size>24</size>
+    <red>255</red>
+    <green>255</green>
+    <blue>0</blue>
+    <alpha>0</alpha>
+  </font>
+
+  <SpinningStar>
+    <file>assets/stars.png</file>
+    <startLoc x="50" y="140"/>
+    <frames>4</frames>
+    <frameInterval>50</frameInterval>
+    <speedX>200</speedX>
+    <speedY>200</speedY>
+    <transparency>true</transparency>
+  </SpinningStar>
+
+  <YellowStar>
+    <file>assets/yellowstar32.png</file>
+    <startLoc x="227" y="240"/>
+    <speedX>300</speedX>
+    <speedY>300</speedY>
+    <transparency>false</transparency>
+  </YellowStar>
 
 </GameData>
