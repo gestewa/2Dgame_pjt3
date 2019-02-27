@@ -56,22 +56,3 @@ void Image::draw(int sx, int sy, int dx, int dy) const
   SDL_Rect dst = {dx, dy, getWidth(), getHeight()};
   SDL_RenderCopy(renderer, texture, &src, &dst);
 }
-
-Image *Image::crop(SDL_Rect sub) const
-{
-  if (sub.x + sub.w > view.w || sub.y + sub.h > view.h)
-  {
-    std::cerr << "Attempted to crop image with invalid geometry."
-              << std::endl
-              << "(0,0 + " << view.w << "x" << view.h << ")"
-              << " --> "
-              << "(" << sub.x << "," << sub.y << " + " << sub.w << "x" << sub.h << ")"
-              << std::endl;
-    return nullptr;
-  }
-
-  Image *cloned = new Image(*this);
-  cloned->view = sub;
-
-  return cloned;
-}
