@@ -4,28 +4,26 @@
 #include "drawable.h"
 
 class Sprite : public Drawable {
-public:
+ public:
   Sprite(const std::string&);
-  Sprite(const std::string&, const Vector2f& pos, const Vector2f& vel, 
+  Sprite(const std::string&, const Vector2f& pos, const Vector2f& vel,
          const Image*);
   Sprite(const Sprite&) = delete;
-  virtual ~Sprite() { } 
+  virtual ~Sprite() {}
   Sprite& operator=(const Sprite&) = delete;
 
-  virtual void draw() const;
+  virtual void draw();
   virtual void update(Uint32 ticks);
 
   virtual const Image* getImage() const { return image; }
-  virtual const SDL_Surface* getSurface() const { 
-    return image->getSurface();
-  }
-  int getScaledWidth()  const { return getScale()*image->getWidth();  } 
-  int getScaledHeight() const { return getScale()*image->getHeight(); } 
+  virtual const SDL_Surface* getSurface() const { return image->getSurface(); }
+  int getScaledWidth() const { return getScale() * image->getWidth(); }
+  int getScaledHeight() const { return getScale() * image->getHeight(); }
 
-private:
-  const Image * image;
+ private:
+  const Image* image;
 
-protected:
+ protected:
   int worldWidth;
   int worldHeight;
 

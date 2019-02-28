@@ -24,27 +24,51 @@
 
   <back>
     <file>assets/background.png</file>
-    <factor>6</factor>
+    <factor>7</factor>
     <transparency>false</transparency>
   </back>
 
+  <sign>
+    <file>assets/sign.png</file>
+    <factor>8</factor>
+    <transparency>false</transparency>
+  </sign>
+
   <table>
-    <file>assets/tables.png</file>
-    <factor>1</factor>
+    <file>assets/table.png</file>
+    <factor>3</factor>
     <transparency>true</transparency>
   </table>
 
   <fairy>
-    <file>assets/fairy_placed.png</file>
-    <factor>2</factor>
+    <file>assets/fairygroup1.png</file>
+    <factor>5</factor>
     <transparency>true</transparency>
   </fairy>
 
   <fairy2>
-    <file>assets/fairy2_placed.png</file>
-    <factor>3</factor>
+    <file>assets/fairygroup2.png</file>
+    <factor>2</factor>
     <transparency>true</transparency>
   </fairy2>
+
+  <fairy3>
+    <file>assets/fairygroup3.png</file>
+    <factor>4</factor>
+    <transparency>true</transparency>
+  </fairy3>
+
+  <fairy4>
+    <file>assets/fairygroup4.png</file>
+    <factor>6</factor>
+    <transparency>true</transparency>
+  </fairy4>
+
+  <dice>
+    <file>assets/dicefloor.png</file>
+    <factor>6</factor>
+    <transparency>true</transparency>
+  </dice>
 
   <font name="font">
     <file>fonts/arial.ttf</file>
@@ -54,6 +78,71 @@
     <blue>0</blue>
     <alpha>0</alpha>
   </font>
+
+  <Dice>
+    <right>
+      <file>assets/black_dice.png</file>
+      <transparency>true</transparency>
+      <frames>6</frames>
+      <frameInterval>1000</frameInterval>
+      <startLoc x="900" y="140"/>
+      <speedX>400</speedX>
+      <speedY>400</speedY>
+    </right>
+    <left>
+      <file>assets/brown_dice.png</file>
+      <transparency>true</transparency>
+      <frames>6</frames>
+      <frameInterval>1000</frameInterval>
+      <startLoc x="900" y="140"/>
+      <speedX>400</speedX>
+      <speedY>400</speedY>
+    </left>
+
+  </Dice>
+
+  <ViolentFairy>
+    <right>
+      <file>assets/sprite4.png</file>
+      <startLoc x="50" y="140"/>
+      <frames>6</frames>
+      <frameInterval>50</frameInterval>
+      <speedX>200</speedX>
+      <speedY>200</speedY>
+      <transparency>true</transparency>
+    </right>
+    <left>
+      <file>assets/sprite4left.png</file>
+      <startLoc x="50" y="140"/>
+      <frames>6</frames>
+      <frameInterval>50</frameInterval>
+      <speedX>200</speedX>
+      <speedY>200</speedY>
+      <transparency>true</transparency>
+    </left>
+  </ViolentFairy>
+
+  <ViolentFairy2>
+    <right>
+      <file>assets/sprite4.png</file>
+      <startLoc x="60" y="140"/>
+      <frames>6</frames>
+      <frameInterval>50</frameInterval>
+      <speedX>200</speedX>
+      <speedY>200</speedY>
+      <transparency>true</transparency>
+    </right>
+    <left>
+      <file>assets/sprite4left.png</file>
+      <startLoc x="60" y="140"/>
+      <frames>6</frames>
+      <frameInterval>50</frameInterval>
+      <speedX>200</speedX>
+      <speedY>200</speedY>
+      <transparency>true</transparency>
+    </left>
+  </ViolentFairy2>
+
 
   <SpinningStar>
     <file>assets/stars.png</file>
@@ -65,12 +154,12 @@
     <transparency>true</transparency>
   </SpinningStar>
 
-  <YellowStar>
+  <Star>
     <file>assets/yellowstar32.png</file>
     <startLoc x="227" y="240"/>
     <speedX>300</speedX>
     <speedY>300</speedY>
     <transparency>false</transparency>
-  </YellowStar>
+  </Star>
 
 </GameData>

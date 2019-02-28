@@ -1,14 +1,13 @@
-#include <vector>
 #include <SDL.h>
+#include <vector>
+#include "clock.h"
 #include "ioMod.h"
 #include "renderContext.h"
-#include "clock.h"
-#include "world.h"
 #include "viewport.h"
+#include "world.h"
 
-class Engine
-{
-public:
+class Engine {
+ public:
   Engine();
   ~Engine();
   void play();
@@ -17,24 +16,15 @@ public:
   Engine(const Engine &) = delete;
   Engine &operator=(const Engine &) = delete;
 
-private:
+ private:
   const RenderContext &rc;
   const IoMod &io;
   Clock &clock;
-
   SDL_Renderer *const renderer;
-  World world;
-  // for each new image you want to overlay
-  World table;
-  World fairy;
-  World fairy2;
-  // for defining the viewing box
+  std::vector<World> backgrounds;
+  std::vector<Drawable *> sprites;
   Viewport &viewport;
-
-  Drawable *star;
-  Drawable *spinningStar;
   int currentSprite;
-
   bool makeVideo;
 
   void draw() const;

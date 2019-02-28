@@ -21,6 +21,7 @@ OBJS = \
 	vector2f.o \
 	clock.o \
 	engine.o \
+	twoWayMultisprite.o \
 	main.o
 EXEC = run
 
