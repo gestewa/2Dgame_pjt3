@@ -1,16 +1,13 @@
 #ifndef IMAGE__H
 #define IMAGE__H
 
+#include <SDL.h>
 #include <iostream>
 #include <string>
-#include <SDL.h>
 
-class Image
-{
-public:
+class Image {
+ public:
   Image(SDL_Surface *);
-  Image(const Image &);
-  Image &operator=(const Image &);
   Image() = delete;
 
   void regenerateTexture();
@@ -22,7 +19,7 @@ public:
   inline int getHeight() const { return surface->h; }
   SDL_Surface *getSurface() const { return surface; }
 
-private:
+ private:
   SDL_Renderer *renderer;
   SDL_Surface *surface;
   SDL_Texture *texture;
