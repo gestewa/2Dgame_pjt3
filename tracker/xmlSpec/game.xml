@@ -12,13 +12,13 @@
   <username>gestewa</username>
 
   <view>
-    <width>1000</width>
+    <width>1800</width>
     <height>1000</height>
     <loc x="30" y="30"/>
   </view>
 
   <world>
-    <width>10000</width>
+    <width>9000</width>
     <height>1553</height>
   </world>
 
@@ -98,68 +98,145 @@
       <speedX>400</speedX>
       <speedY>400</speedY>
     </left>
-
   </Dice>
+
+  <Dice1>
+    <right>
+      <file>assets/black_dice.png</file>
+      <startLoc x="5000" y="1000"/>
+      <frames>6</frames>
+      <frameInterval>250</frameInterval>
+      <speedX>200</speedX>
+      <speedY>200</speedY>
+      <transparency>true</transparency>
+    </right>
+    <left>
+      <file>assets/brown_dice.png</file>
+      <startLoc x="5000" y="1000"/>
+      <frames>6</frames>
+      <frameInterval>250</frameInterval>
+      <speedX>200</speedX>
+      <speedY>200</speedY>
+      <transparency>true</transparency>
+    </left>
+
+  </Dice1>
+
+  <Dice2>
+    <right>
+      <file>assets/black_dice.png</file>
+      <startLoc x="2000" y="100"/>
+      <frames>6</frames>
+      <frameInterval>250</frameInterval>
+      <speedX>200</speedX>
+      <speedY>200</speedY>
+      <transparency>true</transparency>
+    </right>
+    <left>
+      <file>assets/brown_dice.png</file>
+      <startLoc x="2000" y="100"/>
+      <frames>6</frames>
+      <frameInterval>250</frameInterval>
+      <speedX>200</speedX>
+      <speedY>200</speedY>
+      <transparency>true</transparency>
+    </left>
+
+  </Dice2>
+
+  <Dice3>
+    <right>
+      <file>assets/black_dice.png</file>
+      <startLoc x="3000" y="1300"/>
+      <frames>6</frames>
+      <frameInterval>250</frameInterval>
+      <speedX>200</speedX>
+      <speedY>200</speedY>
+      <transparency>true</transparency>
+    </right>
+    <left>
+      <file>assets/brown_dice.png</file>
+      <startLoc x="3000" y="1300"/>
+      <frames>6</frames>
+      <frameInterval>250</frameInterval>
+      <speedX>200</speedX>
+      <speedY>200</speedY>
+      <transparency>true</transparency>
+    </left>
+
+  </Dice3>
+
+  <Dice4>
+    <right>
+      <file>assets/black_dice.png</file>
+      <startLoc x="6000" y="1000"/>
+      <frames>6</frames>
+      <frameInterval>250</frameInterval>
+      <speedX>200</speedX>
+      <speedY>200</speedY>
+      <transparency>true</transparency>
+    </right>
+    <left>
+      <file>assets/brown_dice.png</file>
+      <startLoc x="6000" y="1000"/>
+      <frames>6</frames>
+      <frameInterval>250</frameInterval>
+      <speedX>200</speedX>
+      <speedY>200</speedY>
+      <transparency>true</transparency>
+    </left>
+
+  </Dice4>
 
   <ViolentFairy>
     <right>
       <file>assets/sprite4.png</file>
       <startLoc x="50" y="140"/>
       <frames>6</frames>
-      <frameInterval>50</frameInterval>
-      <speedX>200</speedX>
-      <speedY>200</speedY>
+      <frameInterval>150</frameInterval>
+      <speedX>400</speedX>
+      <speedY>400</speedY>
       <transparency>true</transparency>
     </right>
     <left>
       <file>assets/sprite4left.png</file>
       <startLoc x="50" y="140"/>
       <frames>6</frames>
-      <frameInterval>50</frameInterval>
-      <speedX>200</speedX>
-      <speedY>200</speedY>
+      <frameInterval>150</frameInterval>
+      <speedX>400</speedX>
+      <speedY>400</speedY>
       <transparency>true</transparency>
     </left>
   </ViolentFairy>
 
-  <ViolentFairy2>
-    <right>
-      <file>assets/sprite4.png</file>
-      <startLoc x="60" y="140"/>
-      <frames>6</frames>
-      <frameInterval>50</frameInterval>
-      <speedX>200</speedX>
-      <speedY>200</speedY>
-      <transparency>true</transparency>
-    </right>
-    <left>
-      <file>assets/sprite4left.png</file>
-      <startLoc x="60" y="140"/>
-      <frames>6</frames>
-      <frameInterval>50</frameInterval>
-      <speedX>200</speedX>
-      <speedY>200</speedY>
-      <transparency>true</transparency>
-    </left>
-  </ViolentFairy2>
-
-
-  <SpinningStar>
-    <file>assets/stars.png</file>
-    <startLoc x="50" y="140"/>
-    <frames>4</frames>
-    <frameInterval>50</frameInterval>
+  <RotatingDice>
+    <file>assets/dice.png</file>
+    <startLoc x="500" y="100"/>
+    <frames>24</frames>
+    <frameInterval>250</frameInterval>
     <speedX>200</speedX>
     <speedY>200</speedY>
     <transparency>true</transparency>
-  </SpinningStar>
+  </RotatingDice>
 
-  <Star>
-    <file>assets/yellowstar32.png</file>
-    <startLoc x="227" y="240"/>
-    <speedX>300</speedX>
-    <speedY>300</speedY>
-    <transparency>false</transparency>
-  </Star>
+  <RotatingDice1>
+    <file>assets/dice.png</file>
+    <startLoc x="9000" y="50"/>
+    <frames>24</frames>
+    <frameInterval>250</frameInterval>
+    <speedX>200</speedX>
+    <speedY>200</speedY>
+    <transparency>true</transparency>
+  </RotatingDice1>
+
+  <RotatingDice2>
+    <file>assets/dice.png</file>
+    <startLoc x="1500" y="800"/>
+    <frames>24</frames>
+    <frameInterval>250</frameInterval>
+    <speedX>200</speedX>
+    <speedY>200</speedY>
+    <transparency>true</transparency>
+  </RotatingDice2>
 
 </GameData>

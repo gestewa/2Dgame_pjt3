@@ -36,6 +36,12 @@ Engine::Engine()
       sprites({
           new TwoWayMultiSprite("ViolentFairy"),
           new TwoWayMultiSprite("Dice"),
+          new TwoWayMultiSprite("Dice1"),
+          new TwoWayMultiSprite("Dice2"),
+          new TwoWayMultiSprite("Dice3"),
+          new TwoWayMultiSprite("Dice4"),
+          new MultiSprite("RotatingDice"),
+          new MultiSprite("RotatingDice2"),
       }),
       viewport(Viewport::getInstance()),
       currentSprite(0),
