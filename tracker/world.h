@@ -7,7 +7,6 @@ class World {
   World(const std::string& name, int fact);
   void update();
   void draw() const;
-  World(const World&) = delete;
   World& operator=(const World&) = delete;
 
  private:
