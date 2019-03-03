@@ -8,7 +8,6 @@
 class Image {
  public:
   Image(SDL_Surface *);
-  Image() = delete;
 
   void regenerateTexture();
   void draw(int x, int y) const;

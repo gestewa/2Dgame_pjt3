@@ -6,6 +6,8 @@
 class TwoWayMultiSprite : public MultiSprite {
  public:
   TwoWayMultiSprite(const std::string&);
+  // for future inheritince
+  virtual ~TwoWayMultiSprite() {}
   TwoWayMultiSprite(const TwoWayMultiSprite&) = delete;
   TwoWayMultiSprite& operator=(const TwoWayMultiSprite&) = delete;
   void draw();

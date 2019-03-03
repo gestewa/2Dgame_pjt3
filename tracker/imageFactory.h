@@ -1,13 +1,12 @@
+#include <map>
 #include <string>
 #include <vector>
-#include <map>
-#include "image.h"
 #include "gameData.h"
+#include "image.h"
 #include "spriteSheet.h"
 
-class ImageFactory
-{
-public:
+class ImageFactory {
+ public:
   static ImageFactory &getInstance();
   ~ImageFactory();
 
@@ -17,7 +16,7 @@ public:
   ImageFactory(const ImageFactory &) = delete;
   ImageFactory &operator=(const ImageFactory &) = delete;
 
-private:
+ private:
   const Gamedata &gdata;
 
   std::map<std::string, SDL_Surface *> surfaces;
@@ -28,13 +27,12 @@ private:
   std::map<std::string, std::vector<SDL_Texture *>> multiTextures;
   std::map<std::string, std::vector<Image *>> multiImages;
 
-  ImageFactory() : gdata(Gamedata::getInstance()),
-                   surfaces(),
-                   textures(),
-                   images(),
-                   multiSurfaces(),
-                   multiTextures(),
-                   multiImages()
-  {
-  }
+  ImageFactory()
+      : gdata(Gamedata::getInstance()),
+        surfaces(),
+        textures(),
+        images(),
+        multiSurfaces(),
+        multiTextures(),
+        multiImages() {}
 };

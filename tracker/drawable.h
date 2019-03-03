@@ -13,12 +13,6 @@ class Drawable {
   Drawable(const std::string& n, const Vector2f& pos, const Vector2f& vel)
       : name(n), position(pos), velocity(vel), scale(1.0) {}
 
-  Drawable(const Drawable& s)
-      : name(s.name),
-        position(s.position),
-        velocity(s.velocity),
-        scale(s.scale) {}
-
   virtual ~Drawable() {}
 
   virtual void draw() = 0;
